@@ -18,9 +18,9 @@
   "author": "Vadim Zinoviev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vadim2107/AHJ_dom/issues"
+    "url": "https://github.com/Vadim2107/AHJ_events/issues"
   },
-  "homepage": "https://github.com/Vadim2107/AHJ_dom#readme",
+  "homepage": "https://github.com/Vadim2107/AHJ_events#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
@@ -35,14 +35,14 @@
     "html-webpack-plugin": "^4.5.0",
     "jest": "^26.6.1",
     "live-server": "^1.2.1",
-    "mini-css-extract-plugin": "^1.2.1",
+    "mini-css-extract-plugin": "^1.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.3.2",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "core-js": "3",
+    "core-js": "^3.6.5",
     "file-loader": "^6.2.0"
   }
 }

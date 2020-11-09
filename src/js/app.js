@@ -1,42 +1,90 @@
-const gameboard = document.getElementsByClassName('game-board')[0];
+import img from '../img/goblin.png';
 
-for (let i = 4; i > 0; i -= 1) {
-  const raw = document.createElement('div');
-  raw.className = `raw-${i}`;
-  gameboard.insertBefore(raw, gameboard.firstChild);
-  for (let j = 4; j > 0; j -= 1) {
+// export default class GamePlay {
+//   constructor() {
+//     this.gameBoard = document.getElementsByClassName('game-board');
+//   }
+
+//   createBoard() {
+//     for (let i = 1; i < 5; i += 1) {
+//       this.row = document.createElement('div');
+//       this.row.className = `row_${i}`;
+//       this.gameBoard.append(this.row);
+//       for (let j = 1; j < 5; j += 1) {
+//         const col = document.createElement('div');
+//         col.className = `column col_${j}`;
+//         this.row.append(col);
+//  eslint-disable-next-line max-len
+//         col.style = 'width: 120px; height: 120px; background: rgb(77, 77, 77); display: inline-block; border: 4px solid black; border-radius: 50%; margin-right: 8px';
+//       }
+//     }
+//   }
+
+//   createImage() {
+//     this.image = document.createElement('img');
+//     this.image.style = 'display: flex;';
+//     this.image.src = img;
+//   }
+
+//   let holeRow = 0;
+//   let holeCol = 0;
+
+//   showImage() {
+//     const rowRandom = Math.floor(Math.random() * 4 + 1);
+//     const colRandom = Math.floor(Math.random() * 4 + 1);
+
+//     if (`${holeRow}${holeCol}` === `${rowRandom}${colRandom}`) {
+//       showImage();
+//     } else {
+//       holeRow = rowRandom;
+//       holeCol = colRandom;
+//       const rowImage = document.getElementsByClassName(`row_${holeRow}`)[0];
+//       const colImage = rowImage.getElementsByClassName(`col_${holeCol}`)[0];
+//       colImage.append(image);
+//     }
+//   }
+
+//   play() {
+//     this.createBoard();
+//     this.creatrImage();
+//     setInterval(() => { this.showImage(); }, 1000);
+//   }
+// }
+
+const gameBoard = document.getElementsByClassName('game-board')[0];
+
+for (let i = 1; i < 5; i += 1) {
+  const row = document.createElement('div');
+  row.className = `row_${i}`;
+  gameBoard.append(row);
+  for (let j = 1; j < 5; j += 1) {
     const col = document.createElement('div');
-    col.className = `column col-${j}`;
-    raw.insertBefore(col, raw.firstChild);
+    col.className = `column col_${j}`;
+    row.append(col);
+    col.style = 'width: 120px; height: 120px; background: rgb(77, 77, 77); display: inline-block; border: 4px solid black; border-radius: 50%; margin-right: 8px';
   }
 }
-
-const column = document.getElementsByClassName('column');
-// eslint-disable-next-line no-restricted-syntax
-for (const element of column) {
-  element.style = 'width: 120px; height: 120px; color: blue; display: inline-block; border: 4px solid black; margin-left: 4px';
-}
-
-let cellRaw = 0;
-let cellCol = 0;
 
 const image = document.createElement('img');
-image.style = 'display:flex;';
-image.setAttribute('src', 'https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/goblin.png');
+image.style = 'display: flex;';
+image.src = img;
+
+let holeRow = 0;
+let holeCol = 0;
 
 function showImage() {
-  const rawRandom = Math.floor(Math.random() * 4 + 1);
+  const rowRandom = Math.floor(Math.random() * 4 + 1);
   const colRandom = Math.floor(Math.random() * 4 + 1);
 
-  if (`${cellRaw}${cellCol}` === `${rawRandom}${colRandom}`) {
+  if (`${holeRow}${holeCol}` === `${rowRandom}${colRandom}`) {
     showImage();
   } else {
-    cellRaw = rawRandom;
-    cellCol = colRandom;
-    const rawImage = document.getElementsByClassName(`raw-${cellRaw}`)[0];
-    const colImage = rawImage.getElementsByClassName(`col-${cellCol}`)[0];
-    colImage.insertBefore(image, colImage.firstChild);
+    holeRow = rowRandom;
+    holeCol = colRandom;
+    const rowImage = document.getElementsByClassName(`row_${holeRow}`)[0];
+    const colImage = rowImage.getElementsByClassName(`col_${holeCol}`)[0];
+    colImage.append(image);
   }
 }
 
-setInterval(showImage, 1000);
+setInterval(showImage, 700);
