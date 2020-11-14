@@ -10,6 +10,7 @@ export default class ShowGameBoard {
       this.row = document.createElement('div');
       this.row.className = `row_${i}`;
       this.gameBoard[0].append(this.row);
+      this.gameBoard.style = 'cursor: url("../img/hammer.png"), auto';
       for (let j = 1; j < 5; j += 1) {
         const col = document.createElement('div');
         col.className = `column col_${j}`;

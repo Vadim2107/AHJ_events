@@ -63,6 +63,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
+      // favicon: './src/img/hammer.png',
     }),
   ],
 };
