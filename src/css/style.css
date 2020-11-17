@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat; */
   text-align: center;
   /* cursor: url("../img/hammer.png"), auto; */
-  /* cursor: url("https://raw.githubusercontent.com/madivira/ahj-event-goblin/master/src/img/hammer.png"), auto; */
+  cursor: url("https://raw.githubusercontent.com/madivira/ahj-event-goblin/master/src/img/hammer.png"), auto;
   /* cursor: url("https://raw.githubusercontent.com/vadim2107/ahj_events/main/src/img/hammer.png"), auto; */
   /* cursor: pointer; */
 }
