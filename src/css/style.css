@@ -3,8 +3,36 @@ body {
   /* background-image: url('../img/GracefulMiniatureBustard-small.gif');
   background-repeat: no-repeat; */
   text-align: center;
-  /* cursor: url("../img/hammer.png"), auto; */
+  /* cursor: url("../img/hammer2.png"), auto; */
   /* cursor: url("https://raw.githubusercontent.com/madivira/ahj-event-goblin/master/src/img/hammer.png"), auto; */
-  /* cursor: url("https://raw.githubusercontent.com/vadim2107/ahj_events/main/src/img/hammer.png"), auto; */
+  /* cursor: url("https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/hammer2.png"), auto; */
   /* cursor: pointer; */
+}
+
+.status {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  width: 550px;
+  margin: auto;
+}
+
+.hole {
+  width: 120px;
+  height: 120px;
+  background: rgb(77, 77, 77);
+  display: inline-block;
+  border: 4px solid black;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.hole_has-goblin {
+  /* background-image: url(../img/goblin.png); */
+  background-image: url(https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/goblin.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: brown;
 }
