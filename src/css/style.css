@@ -1,5 +1,6 @@
 body {
   background: rgb(152, 247, 128);
+<<<<<<< HEAD
   text-align: center; 
   cursor: url("https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/hammer2.png"), auto;  
 }
@@ -30,4 +31,13 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: brown;
+=======
+  /* background-image: url('../img/GracefulMiniatureBustard-small.gif');
+  background-repeat: no-repeat; */
+  text-align: center;
+  /* cursor: url("../img/hammer.png"), auto; */
+  cursor: url("https://raw.githubusercontent.com/madivira/ahj-event-goblin/master/src/img/hammer.png"), auto;
+  /* cursor: url("https://raw.githubusercontent.com/vadim2107/ahj_events/main/src/img/hammer.png"), auto; */
+  /* cursor: pointer; */
+>>>>>>> fd8432b60295040d3285adb55ca4ffe2ad59c538
 }
