@@ -15,22 +15,27 @@ export default class ShowGameBoard {
 
   showImage() {
     this.activeHole = 0;
+    this.newHole = 0;
     const hole = document.getElementsByClassName('hole');
     const arrHole = Array.from(hole);
     arrHole[0].classList.add('hole_has-goblin');
-    const deactivateHole = (index) => {
-      arrHole[index].classList.remove('hole_has-goblin');
+
+    const deactivateHole = () => {
+      arrHole[this.activeHole].classList.remove('hole_has-goblin');
     };
 
-    const activateHole = (index) => {
-      arrHole[index].classList.add('hole_has-goblin');
+    const activateHole = () => {
+      arrHole[this.activeHole].classList.add('hole_has-goblin');
     };
 
     const next = () => {
       setTimeout(() => {
-        deactivateHole(this.activeHole);
-        this.activeHole = Math.floor(Math.random() * 16);
-        activateHole(this.activeHole);
+        deactivateHole();
+        while (this.activeHole === this.newHole) {
+          this.activeHole = Math.floor(Math.random() * arrHole.length);
+        }
+        activateHole();
+        this.newHole = this.activeHole;
         next();
       }, 1000);
     };

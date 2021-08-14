@@ -48,7 +48,7 @@ export default class PlayGame {
         lost.textContent = 0;
         dead.textContent = 0;
         this.lost = 0;
-        this.dead = 0;
+        this.dead = 0;        
       }
     }
   }
