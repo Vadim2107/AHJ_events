@@ -1,8 +1,8 @@
 body {
   background: rgb(152, 247, 128);
   text-align: center;
-  cursor: url("../img/hammer2.png"), auto;
-  /* cursor: url("https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/hammer2.png"), auto; */
+  /* cursor: url("../img/hammer2.png"), auto; */
+  cursor: url("https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/hammer2.png"), auto;
 }
 
 .status {
@@ -26,8 +26,8 @@ body {
 }
 
 .hole_has-goblin {
-  background-image: url(../img/goblin.png);
-  /* background-image: url(https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/goblin.png); */
+  /* background-image: url(../img/goblin.png); */
+  background-image: url(https://raw.githubusercontent.com/Vadim2107/AHJ_events/main/src/img/goblin.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
