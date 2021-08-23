@@ -7,6 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: 'app.bundle.js',
   },
   module: {
     rules: [
@@ -31,40 +32,33 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              mimetype: 'image/png',
-              limit: false,
-              esModule: false,
-            },
-          },
-        ],
-      },
       // {
-      //   test: /\.(png|jpg|gif|webp)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: {
-      //       limit: 8192, // будет использоваться file-loader
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         mimetype: 'image/png',
+      //         limit: false,
+      //         esModule: false,
+      //       },
       //     },
-      //   },
+      //   ],
       // },
+      {
+        test: /\.(png|jpg|gif|webp)$/,
+        use: 'url-loader',
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      favicon: './src/img/goblin.png',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
-      // favicon: './src/img/hammer.png',
     }),
   ],
 };
