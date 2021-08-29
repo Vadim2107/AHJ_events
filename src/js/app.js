@@ -1,11 +1,8 @@
 import ShowGameBoard from './ShowGameBoard';
 import PlayGame from './PlayGame';
 
-const showGameBoard = new ShowGameBoard();
+const showGameBoard = new ShowGameBoard(4);
 const playGame = new PlayGame();
-const board = showGameBoard.showBoard();
-const play = playGame.eventClick();
-setTimeout(board, 1000);
-setTimeout(play, 1000);
-// showGameBoard.showBoard();
-// playGame.eventClick();
+
+showGameBoard.showBoard();
+playGame.eventClick();

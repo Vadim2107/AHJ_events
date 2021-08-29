@@ -35,8 +35,21 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|webp)$/,
-        use: 'url-loader',
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: 'img/[name].[ext]',
+          },
+        },
       },
+      // {
+      //   test: /\.(png|svg|jpg|gif)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: 'img/[name].[ext]',
+      //     esModule: false,
+      //   },
+      // },
     ],
   },
   plugins: [
