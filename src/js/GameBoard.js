@@ -4,7 +4,6 @@ export default class GameBoard {
     this.cells = [];
     this.activeHole = 0;
     this.gameBoard = document.querySelector('.game-board');
-    this.clickOrNo = true;
     this.createBoard();
   }
 
@@ -15,7 +14,6 @@ export default class GameBoard {
       this.gameBoard.append(cell);
 
       this.cells.push(cell);
-      // setInterval(() => this.setNextCell(), 1000);
     }
   }
 
