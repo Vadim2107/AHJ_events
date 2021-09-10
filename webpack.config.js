@@ -8,6 +8,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: 'app.bundle.js',
   },
   module: {
     rules: [
@@ -32,18 +33,18 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
+      // {
+      //   test: /\.(png|jpg|gif|webp)$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       name: 'img/[name].[ext]',
+      //     },
+      //   },
+      // },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              mimetype: 'image/png',
-              limit: false,
-              esModule: false,
-            },
-          },
-        ],
+        test: /\.png$/,
+        type: 'asset/resource',
       },
     ],
   },
@@ -51,12 +52,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      favicon: './src/img/goblin.png',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
-      // favicon: './src/img/hammer.png',
     }),
   ],
 };
