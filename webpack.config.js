@@ -43,18 +43,8 @@ module.exports = {
       //   },
       // },
       {
-<<<<<<< HEAD
         test: /\.png$/,
         type: 'asset/resource',
-=======
-        test: /\.(png|jpg|gif|webp)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'img/[name].[ext]',
-          },
-        },
->>>>>>> ee1b7ac7ba96a856529de6a23ff24a4e5ccee8f4
       },
       // {
       //   test: /\.(png|svg|jpg|gif)$/,
