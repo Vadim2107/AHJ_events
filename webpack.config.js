@@ -33,26 +33,18 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
-      // {
-      //   test: /\.(png|jpg|gif|webp)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: {
-      //       name: 'img/[name].[ext]',
-      //     },
-      //   },
-      // },
       {
-        test: /\.png$/,
-        type: 'asset/resource',
+        test: /\.(png|jpg|gif|webp)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: 'img/[name].[ext]',
+          },
+        },
       },
       // {
-      //   test: /\.(png|svg|jpg|gif)$/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: 'img/[name].[ext]',
-      //     esModule: false,
-      //   },
+      //   test: /\.png$/,
+      //   type: 'asset/resource',
       // },
     ],
   },
