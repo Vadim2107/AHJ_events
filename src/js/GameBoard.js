@@ -20,7 +20,6 @@ export default class GameBoard {
   setNextCell() {
     const hole = document.querySelectorAll('.hole');
     const arrHole = Array.from(hole);
-    arrHole[this.activeHole].classList.add('hole_has-goblin');
 
     arrHole[this.activeHole].classList.remove('hole_has-goblin');
     this.activeHole = Math.floor(Math.random() * arrHole.length);
@@ -28,6 +27,7 @@ export default class GameBoard {
   }
 
   showImage() {
-    setInterval(() => this.setNextCell(), 1000);
+    // setInterval(() => this.setNextCell(), 1000);
+    this.setNextCell();
   }
 }

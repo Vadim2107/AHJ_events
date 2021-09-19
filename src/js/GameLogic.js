@@ -42,11 +42,11 @@ export default class GameLogic extends GameBoard {
     }, 1000);
 
     this.board.cells.forEach((element) => {
-      element.addEventListener('click', (event) => {
+      element.addEventListener('click', () => {
         this.clickOrNo = true;
         if (element.classList.contains('hole_has-goblin')) {
           this.scoring(true);
-          event.currentTarget.classList.remove('hole_has-goblin');
+          this.board.setNextCell();
         } else {
           this.scoring(false);
         }
