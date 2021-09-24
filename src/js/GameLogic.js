@@ -14,11 +14,9 @@ export default class GameLogic extends GameBoard {
     const dead = document.getElementById('dead');
     const lost = document.getElementById('lost');
     if (score) {
-      // eslint-disable-next-line no-plusplus
       this.dead += 1;
       dead.textContent = this.dead;
     } else {
-    // eslint-disable-next-line no-plusplus
       this.lost += 1;
       lost.textContent = this.lost;
       if (this.lost === 5) {
